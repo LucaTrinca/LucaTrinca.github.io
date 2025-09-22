@@ -1,69 +1,53 @@
-/* Global */
+/* General page */
 body {
+  font-family: Arial, sans-serif;
+  background-color: #1e3a8a; /* deep blue */
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #1e3a8a; /* medium blue background */
-  color: #f0f0f0;
+  padding: 0;
+  color: white;
 }
 
-/* Header Tab */
-header {
-  background: #0f1e4d; /* darker navy tab */
-  border-radius: 0 0 25px 25px; /* smooth rounded bottom */
-  padding: 30px 20px;
+/* Top tab */
+header.tab {
+  background-color: #2563eb; /* lighter blue tab */
+  padding: 20px;
   text-align: center;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
-header h1 {
+
+header.tab h1 {
   margin: 0;
-  font-size: 2.5em;
-  color: #ffcc00; /* gold highlight for your name */
+  font-size: 2em;
 }
-header p {
-  margin-top: 8px;
-  font-size: 1.2em;
-  color: #dbeafe; /* lighter blue text */
+
+header.tab p {
+  margin: 5px 0 0;
+  font-size: 1.1em;
 }
-nav {
-  margin-top: 15px;
+
+/* Card sections */
+.card {
+  background-color: #1e40af; /* darker blue boxes */
+  margin: 30px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
-nav a {
-  color: #ffcc00;
-  margin: 0 15px;
+
+.card h2 {
+  margin-top: 0;
+  color: #93c5fd; /* light blue headings */
+}
+
+a {
+  color: #bfdbfe; /* light blue links */
   text-decoration: none;
-  font-weight: bold;
 }
-nav a:hover {
+
+a:hover {
   text-decoration: underline;
 }
-
-/* Content Boxes */
-section {
-  background: #0f172a; /* dark blue box */
-  border-radius: 20px;
-  padding: 30px;
-  margin: 40px auto;
-  max-width: 1000px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
-}
-section h2 {
-  color: #ffcc00;
-  margin-top: 0;
-}
-
-/* Project Cards */
-.project-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-.card {
-  background: #1e293b;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.card:hove
