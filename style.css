@@ -106,5 +106,19 @@ a:hover {
   color: #dbeafe;
 }
 
+.project-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-link h3 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.project-link:hover {
+  text-decoration: none;
+}
 
 
