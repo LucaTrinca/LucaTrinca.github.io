@@ -6,6 +6,18 @@
   <title>Electric Piano Project</title>
   <link rel="stylesheet" href="../style.css">
 </head>
+<script>
+  const mainImg = document.querySelector('.gallery-main img');
+  const thumbs = document.querySelectorAll('.gallery-thumbs img');
+
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      mainImg.src = thumb.src;
+      mainImg.alt = thumb.alt;
+    });
+  });
+</script>
+  
 <body>
   <header>
     <h1>Electric Piano Project </h1>
