@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skid Plate Design – Luca Trinca</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>Skid Plate Design</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="project2.html">Next Project →</a>
+    </nav>
+  </header>
+
+  <section class="project">
+    <img src="../images/skidplate.jpg" alt="Skid Plate" class="hero-img">
+    <h2>Overview</h2>
+    <p>This project focused on designing and manufacturing a UHMW skid plate for our Baja SAE off-road vehicle. The goal was to maximize durability while keeping weight low.</p>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>Impact-resistant UHMW material</li>
+      <li>Weight reduction through optimized geometry</li>
+      <li>Tested in real off-road conditions</li>
+    </ul>
+
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="../images/skidplate1.jpg" alt="CAD model">
+      <img src="../images/skidplate2.jpg" alt="Mounted skid plate">
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="../index.html">← Back to Home</a></p>
+  </footer>
+</body>
+</html>
