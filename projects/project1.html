@@ -2,39 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Skid Plate Design – Luca Trinca</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electric Piano Project</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
-    <h1>Skid Plate Design</h1>
+    <h1>Electric Piano Project 🎹</h1>
     <nav>
       <a href="../index.html">Home</a>
-      <a href="project2.html">Next Project →</a>
+      <a href="project1.html">Electric Piano</a>
     </nav>
   </header>
 
-  <section class="project">
-    <img src="../images/skidplate.jpg" alt="Skid Plate" class="hero-img">
-    <h2>Overview</h2>
-    <p>This project focused on designing and manufacturing a UHMW skid plate for our Baja SAE off-road vehicle. The goal was to maximize durability while keeping weight low.</p>
+  <main class="container">
 
-    <h2>Key Features</h2>
-    <ul>
-      <li>Impact-resistant UHMW material</li>
-      <li>Weight reduction through optimized geometry</li>
-      <li>Tested in real off-road conditions</li>
-    </ul>
+    <!-- Image Gallery -->
+    <section class="card">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <div class="gallery-main">
+          <img src="images/final.jpg" alt="Final Electric Piano">
+        </div>
+        <div class="gallery-thumbs">
+          <img src="images/progress1.jpg" alt="Progress 1">
+          <img src="images/progress2.jpg" alt="Progress 2">
+          <img src="images/progress3.jpg" alt="Progress 3">
+          <img src="images/progress4.jpg" alt="Progress 4">
+        </div>
+      </div>
+    </section>
 
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="../images/skidplate1.jpg" alt="CAD model">
-      <img src="../images/skidplate2.jpg" alt="Mounted skid plate">
-    </div>
-  </section>
+    <!-- Key Skills -->
+    <section class="card">
+      <h2>Key Skills Developed</h2>
+      <ul>
+        <li>Programming in C/C++ (Arduino)</li>
+        <li>CAD modeling and 3D printing</li>
+        <li>Hands-on fabrication (drill press, band saw, belt sander)</li>
+        <li>Circuit design and prototyping</li>
+        <li>Design iteration and problem-solving</li>
+      </ul>
+    </section>
 
-  <footer>
-    <p><a href="../index.html">← Back to Home</a></p>
-  </footer>
+    <!-- Project Overview -->
+    <section class="card">
+      <h2>Project Overview</h2>
+      <p>
+        I designed and fabricated a functional Electric Piano using scrap wood,
+        3D-printed components, and an Arduino microcontroller. The wooden frame
+        and lever system provided structural support, while custom CAD-modeled
+        keys were 3D printed for consistent geometry. Button triggers mounted
+        beneath each key served as inputs, and sound output was generated through
+        a piezo buzzer controlled by the Arduino.
+      </p>
+    </section>
+
+    <!-- Engineering Challenges -->
+    <section class="card">
+      <h2>Engineering Challenges & Solutions</h2>
+      <h3>Precision in Fabrication</h3>
+      <p><b>Challenge:</b> Accurate measurements were critical to ensure uniform key spacing and reliable lever action.<br>
+      <b>Solution:</b> Refined blueprinting process and learned to take consistently accurate measurements.</p>
+
+      <h3>Polyphony (Multiple Notes)</h3>
+      <p><b>Challenge:</b> Initial attempts limited the piano to a single note.<br>
+      <b>Solution:</b> Implemented the Arduino “Mozzi” audio synthesis library to enable multiple tones.</p>
+
+      <h3>Counterweight Calibration</h3>
+      <p><b>Challenge:</b> Keys would unintentionally trigger due to their weight.<br>
+      <b>Solution:</b> Designed experiments to test counterweights, iterating until optimal balance was found.</p>
+
+      <h3>False Triggering</h3>
+      <p><b>Challenge:</b> Mechanical weight and software errors caused unwanted activations.<br>
+      <b>Solution:</b> Combined calibrated counterweights with refined code logic for reliability.</p>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="card">
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Learned precise blueprinting and fabrication techniques.</li>
+        <li>Gained experience in extending hardware with software libraries.</li>
+        <li>Applied iterative testing and design thinking to solve balance issues.</li>
+        <li>Strengthened ability to merge mechanical design with electronic systems.</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
