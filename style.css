@@ -129,23 +129,50 @@ a:hover {
   align-items: center;
 }
 
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
 .gallery-main img {
   width: 100%;
-  max-width: 500px;
-  height: 300px;             /* fixed height */
-  object-fit: cover;         /* crops to fill box neatly */
+  max-width: 600px;
+  height: 350px;            /* consistent size */
+  object-fit: cover;        /* keeps neat boxes */
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.gallery-main img:hover {
+  transform: scale(1.02);
+}
+
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 600px;
 }
 
 .gallery-thumbs img {
   width: 100%;
-  height: 120px;             /* fixed height for thumbnails */
-  object-fit: cover;         /* keeps them uniform */
+  height: 100px;           /* uniform size */
+  object-fit: cover;       /* neat crops */
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  transition: transform 0.2s;
 }
 
+.gallery-thumbs img:hover {
+  transform: scale(1.05);
+}
 
 
 
