@@ -2,39 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Skid Plate Design – Luca Trinca</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prosthetic Hand Extension Project</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
-    <h1>Skid Plate Design</h1>
+    <h1>Prosthetic Hand Extension ✋</h1>
     <nav>
       <a href="../index.html">Home</a>
-      <a href="project2.html">Next Project →</a>
+      <a href="project1.html">Electric Piano</a>
+      <a href="project2.html">Prosthetic Hand</a>
     </nav>
   </header>
 
-  <section class="project">
-    <img src="../images/skidplate.jpg" alt="Skid Plate" class="hero-img">
-    <h2>Overview</h2>
-    <p>This project focused on designing and manufacturing a UHMW skid plate for our Baja SAE off-road vehicle. The goal was to maximize durability while keeping weight low.</p>
+  <main class="container">
 
-    <h2>Key Features</h2>
-    <ul>
-      <li>Impact-resistant UHMW material</li>
-      <li>Weight reduction through optimized geometry</li>
-      <li>Tested in real off-road conditions</li>
-    </ul>
+    <!-- Project Overview + Skills -->
+    <section class="card">
+      <h2>Project Overview</h2>
+      <p>
+        Motivated by an interest in prosthetics and adaptive devices, I designed and fabricated a 
+        <b>Prosthetic Dexterous Hand Extension</b>. Using SolidWorks, I modified an existing prosthetic hand 
+        design to improve finger maneuverability and grip efficiency. The enhanced hand was mounted to the end 
+        of a shaft, creating an arm extension operated through a system of cables and elastic bands.
+      </p>
+      <p>
+        The project served as a <b>mechanical proof-of-concept</b>, exploring the kinematics of prosthetic fingers 
+        and the role of material choices in grip performance. While this prototype was mechanically driven, I am 
+        considering future iterations that incorporate electrical control systems for enhanced dexterity.
+      </p>
+    </section>
 
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="../images/skidplate1.jpg" alt="CAD model">
-      <img src="../images/skidplate2.jpg" alt="Mounted skid plate">
-    </div>
-  </section>
+    <section class="card">
+      <h2>Key Skills Developed</h2>
+      <ul>
+        <li>CAD modeling in SolidWorks</li>
+        <li>Material selection for mechanical performance</li>
+        <li>Designing and executing testing procedures</li>
+        <li>Iterative prototyping and design optimization</li>
+        <li>Problem-solving in biomedical applications</li>
+      </ul>
+    </section>
 
-  <footer>
-    <p><a href="../index.html">← Back to Home</a></p>
-  </footer>
+    <!-- Gallery -->
+    <section class="card">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <div class="gallery-main">
+          <img id="mainImage2" src="images/Hand - Final.jpg" alt="Final Prosthetic Hand">
+        </div>
+        <div class="gallery-thumbs">
+          <img src="images/Hand - CAD.png" alt="CAD Model" onclick="swapImage2(this)">
+          <img src="images/Hand - Mechanism.png" alt="Finger Mechanism" onclick="swapImage2(this)">
+          <img src="images/Hand - Testing.png" alt="Testing Phase" onclick="swapImage2(this)">
+          <img src="images/Hand - Prototype.jpg" alt="Prototype Build" onclick="swapImage2(this)">
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Challenges -->
+    <section class="card">
+      <h2>Engineering Challenges & Solutions</h2>
+
+      <h3>Finger Contraction Mechanism</h3>
+      <p><b>Challenge:</b> The original design only featured a tendon track along the back of each finger, limiting full contraction.<br>
+      <b>Solution:</b> Added a second tendon channel along the inside for contraction, while using the outer channel with elastic cables for extension.</p>
+
+      <h3>Design for Manufacturability</h3>
+      <p><b>Challenge:</b> Precise tolerances were needed around pin holes and moving joints.<br>
+      <b>Solution:</b> Refined the CAD model with appropriate tolerances for smooth motion and real-world manufacturability.</p>
+
+      <h3>Grip Strength Limitations</h3>
+      <p><b>Challenge:</b> Early prototypes slipped with objects heavier than ~200 g.<br>
+      <b>Solution:</b> Applied higher-friction materials to the finger surfaces to reduce slip.</p>
+
+      <h3>Small Object Handling</h3>
+      <p><b>Challenge:</b> Flat palm design limited grasping of narrow objects like pencils.<br>
+      <b>Solution:</b> Modified palm geometry with added material, creating a more natural grip for precision handling.</p>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="card">
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Applied SolidWorks to biomedical-inspired mechanical design.</li>
+        <li>Learned to incorporate manufacturing tolerances in CAD models.</li>
+        <li>Strengthened prototyping and iterative testing skills.</li>
+        <li>Improved mechanical and usability performance in prosthetic mechanisms.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function swapImage2(imgElement) {
+      const mainImage = document.getElementById("mainImage2");
+      mainImage.src = imgElement.src;
+      mainImage.alt = imgElement.alt;
+    }
+  </script>
 </body>
 </html>
