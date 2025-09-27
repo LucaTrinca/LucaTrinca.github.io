@@ -175,5 +175,47 @@ a:hover {
 }
 
 
+/* Project container */
+.projects {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 1rem; /* spacing between cards */
+  margin: 1rem 0;
+}
+
+/* Project card (buttons on homepage) */
+.project-card {
+  display: block;
+  background: #1e3a8a; /* dark blue */
+  color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  max-width: 600px;   /* keeps them from being massive */
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+/* Title inside project cards */
+.project-card h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #93c5fd; /* light blue */
+}
+
+/* Description */
+.project-card p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: #dbeafe; /* lighter blue */
+}
+
+
 
 
