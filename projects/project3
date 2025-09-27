@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automated Claw Project</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>🤖 Automated Claw Project</h1>
+    <a href="../index.html">← Back to Home</a>
+  </header>
+
+  <main class="project-page">
+    <section>
+      <h2>Key Skills Developed</h2>
+      <ul>
+        <li>Programming in C/C++ (Arduino)</li>
+        <li>Integrating sensor output to automate retrieval process</li>
+        <li>Hands-on fabrication with sheet metal</li>
+        <li>Technical drawing and prototyping</li>
+        <li>Iterative testing and design problem-solving</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p>
+        As part of my APSC 101 university course, I designed and built an automated retrieval device that competed in a series of engineering challenges. The frame and claw mechanism were fabricated from sheet metal, requiring precise cutting, bending, and assembly. To guide the design, my team and I developed detailed technical drawings and models of the system.
+      </p>
+      <p>
+        My primary role was programming the Arduino-based control system. Using ultrasonic sensors, I developed reliable code to automate the retrieval process, ensuring consistent detection and actuation of the claw mechanism. During the final competition, the system operated flawlessly, contributing to our team placing in the top 10 overall.
+      </p>
+    </section>
+
+    <section>
+      <h2>Engineering Challenges and Solutions</h2>
+      <ul>
+        <li><strong>Sensor Noise Causing False Triggers:</strong> The ultrasonic sensor occasionally produced noisy signals, causing the claw to open unexpectedly.<br>
+        → <em>Solution:</em> Implemented a software “debouncing” feature to filter out outlier inputs, stabilizing sensor performance.</li>
+
+        <li><strong>Claw Alignment Issues:</strong> The claw sometimes failed to fully close, leaving gaps that caused objects to slip out.<br>
+        → <em>Solution:</em> Reoriented the servo motor to improve alignment, enabling the jaws to close more securely and reliably grip objects.</li>
+
+        <li><strong>Performance Optimization for Bulk Retrieval:</strong> In one challenge, the goal was to move as many foam cubes as possible within a limited time.<br>
+        → <em>Solution:</em> Refined control logic and calibrated servo timing to minimize downtime between retrievals, improving throughput and efficiency.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Strengthened programming skills in C/C++ with Arduino.</li>
+        <li>Gained experience integrating sensors with actuation systems for automation.</li>
+        <li>Learned the importance of iterative testing and rapid calibration under time constraints.</li>
+        <li>Practiced designing for both mechanical reliability and software robustness.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
