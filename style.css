@@ -1,150 +1,88 @@
-/* General page */
+/* ====== General Page ====== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #1e3a8a; /* deep blue */
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff; /* clean white */
+  color: #1e293b; /* dark gray text */
   margin: 0;
   padding: 0;
-  color: white;
+  line-height: 1.6;
 }
 
-/* Top tab */
+/* ====== Top Header ====== */
 header.tab {
-  background-color: #2563eb; /* lighter blue tab */
-  padding: 20px;
+  background-color: #3b82f6; /* bright medium blue */
+  color: white;
+  padding: 25px;
   text-align: center;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 header.tab h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 2.2em;
+  font-weight: 700;
 }
 
 header.tab p {
-  margin: 5px 0 0;
+  margin: 6px 0 0;
   font-size: 1.1em;
+  font-weight: 400;
 }
 
-/* Card sections */
+/* ====== Card Sections ====== */
 .card {
-  background-color: #1e40af; /* darker blue boxes */
-  margin: 30px auto;
-  padding: 20px;
-  width: 80%;
-  max-width: 800px;
+  background-color: #f0f6ff; /* light blue-gray card */
+  margin: 40px auto;
+  padding: 30px;
+  width: 85%;
+  max-width: 900px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
 }
 
 .card h2 {
+  color: #1d4ed8; /* rich blue */
   margin-top: 0;
-  color: #93c5fd; /* light blue headings */
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
+/* ====== Links ====== */
 a {
-  color: #bfdbfe; /* light blue links */
+  color: #2563eb;
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Project gallery */
-.gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.gallery-main img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.gallery-thumbs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-
-.gallery-thumbs img {
-  width: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.gallery-thumbs img:hover {
-  transform: scale(1.05);
-}
-
-.project-card {
-  background-color: #1e3a8a; /* darker blue box */
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
-}
-
-.project-card:hover {
-  transform: scale(1.02);
-}
-
-.project-card a {
-  color: #ffffff;
-  font-size: 1.3em;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.project-card p {
-  color: #dbeafe;
-}
-
-.project-link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-.project-link h3 {
-  margin-top: 0;
-  color: #ffffff;
-}
-
-.project-link:hover {
-  text-decoration: none;
-}
-
-/* Grid layout for images */
-.gallery-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
+/* ====== Project Gallery ====== */
 .gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem auto;
-  max-width: 800px;
+  gap: 1rem;
 }
 
 .gallery-main img {
   width: 100%;
   max-width: 600px;
-  height: 350px;            /* consistent size */
-  object-fit: cover;        /* keeps neat boxes */
+  height: 350px;
+  object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
 }
 
 .gallery-main img:hover {
@@ -155,67 +93,73 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
-  margin-top: 1rem;
   width: 100%;
   max-width: 600px;
 }
 
 .gallery-thumbs img {
   width: 100%;
-  height: 100px;           /* uniform size */
-  object-fit: cover;       /* neat crops */
+  height: 100px;
+  object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
   transition: transform 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .gallery-thumbs img:hover {
   transform: scale(1.05);
 }
 
-
-/* Project container */
+/* ====== Project Cards on Homepage ====== */
 .projects {
   display: flex;
-  flex-direction: column; /* stack vertically */
-  gap: 1rem; /* spacing between cards */
+  flex-direction: column;
+  gap: 1.2rem;
   margin: 1rem 0;
+  align-items: center;
 }
 
-/* Project card (buttons on homepage) */
 .project-card {
   display: block;
-  background: #1e3a8a; /* dark blue */
-  color: #fff;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background: #e0ecff; /* lighter blue */
+  color: #1e293b;
+  padding: 1.2rem;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-  max-width: 600px;   /* keeps them from being massive */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover effect */
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* Title inside project cards */
 .project-card h2 {
   margin: 0;
   font-size: 1.4rem;
-  color: #93c5fd; /* light blue */
+  color: #1e3a8a;
 }
 
-/* Description */
 .project-card p {
   margin: 0.5rem 0 0;
   font-size: 1rem;
-  color: #dbeafe; /* lighter blue */
+  color: #334155;
 }
 
+/* ====== Contact Section ====== */
+.email-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
 
-
-
+.email-btn:hover {
+  background: #2563eb;
+}
