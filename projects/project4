@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poker Odds Calculator</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>Poker Odds Calculator</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Key Skills Developed</h2>
+      <ul>
+        <li>Low-level C Programming & Memory Management</li>
+        <li>WebAssembly (Wasm) & Emscripten Compiler</li>
+        <li>Bitwise Logic & Algorithm Optimization</li>
+        <li>Full-Stack Integration (Bridging C and JavaScript)</li>
+        <li>Hash Table Implementation & Combinatorics</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Project Overview</h2>
+      <p>
+        I built a high-performance, serverless Texas Hold'em equity solver that runs entirely 
+        in the browser. Unlike traditional calculators that rely on slow server-side APIs, 
+        this project uses a custom C engine compiled to WebAssembly.
+      </p>
+      <p>
+        The engine utilizes advanced combinatorial algorithms—including prime number mapping 
+        and perfect hash lookups—to evaluate millions of poker hands in milliseconds. 
+        The result is a tool that provides "Exact Calculation" accuracy with zero network latency.
+        <br><br>
+        <a href="https://lucatrinca.github.io/poker-solver/" target="_blank" style="color: #eab308; font-weight: bold;">
+          Try the Live Demo Here &rarr;
+        </a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Project Images</h2>
+      <div class="gallery">
+        <div class="gallery-main">
+          <img id="mainImage" src="images/poker-main.jpg" alt="Poker Calculator UI">
+        </div>
+
+        <div class="gallery-thumbs">
+          <img src="images/poker-main.jpg" alt="Main UI" onclick="swapImage(this)">
+          <img src="images/poker-code-c.png" alt="C Engine Code" onclick="swapImage(this)">
+          <img src="images/poker-picker.png" alt="Card Picker" onclick="swapImage(this)">
+          <img src="images/poker-wasm.png" alt="WebAssembly Stats" onclick="swapImage(this)">
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Engineering Challenges & Solutions</h2>
+      
+      <h3>Combinatorial Explosion</h3>
+      <p><b>Challenge:</b> Calculating exact odds involves analyzing millions of possible board outcomes, which is too slow for standard JavaScript.<br>
+      <b>Solution:</b> Wrote the core engine in C using <b>Bitwise Operations</b> to check hand strength without loops, increasing speed by ~100x compared to JS.</p>
+
+      <h3>Hand Evaluation Latency</h3>
+      <p><b>Challenge:</b> Linearly searching for hand values (e.g., "Is this a Full House?") was computationally expensive.<br>
+      <b>Solution:</b> Implemented a <b>Prime Number Mapping</b> system where every hand has a unique product ID, allowing for O(1) instant lookups via a pre-computed Hash Table.</p>
+
+      <h3>Browser Integration</h3>
+      <p><b>Challenge:</b> Running C code in a web browser requires a bridge between the binary and the DOM.<br>
+      <b>Solution:</b> Used <b>Emscripten</b> to compile the C code to WebAssembly and manually managed memory allocation (`malloc`/`free`) to pass data between the JS frontend and the C heap.</p>
+
+      <h3>Monte Carlo vs. Exact</h3>
+      <p><b>Challenge:</b> Deciding between approximation (simulation) or perfection (solver).<br>
+      <b>Solution:</b> Proved mathematically that for pre-flop scenarios (~1.7M combinations), the optimized C engine could solve the <b>entire state space</b> in under 100ms, making exact calculation superior to simulation.</p>
+    </section>
+
+    <section class="card">
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Mastered the workflow of compiling C to WebAssembly for web deployment.</li>
+        <li>Deepened understanding of data structures (Hash Maps) and algorithmic complexity (Big O).</li>
+        <li>Learned to optimize critical hot-paths using bitwise arithmetic.</li>
+        <li>Built a functional, responsive UI without relying on heavy frameworks.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function swapImage(imgElement) {
+      const mainImage = document.getElementById("mainImage");
+      mainImage.src = imgElement.src;
+      mainImage.alt = imgElement.alt;
+    }
+  </script>
+</body>
+</html>
